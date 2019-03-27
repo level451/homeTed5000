@@ -44,16 +44,12 @@ ted.test  = (d)=>{
     return ('hey returned:'+d)
 }
 
-ted.value = 3
-var i = 1
 ted.asyncTest = async function(...args){
     console.log(args)
     await new Promise(resolve => setTimeout(resolve, 5000))
     console.log(args)
-    ++i;
-    return args[2]+' = '+args[1]+args[0]+i
+    return args[2]+' = '+args[1]+args[0]
 }
-
 
 ted.on('secondData',(d)=>{
 
