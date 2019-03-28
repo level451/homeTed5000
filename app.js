@@ -1,6 +1,7 @@
 //comment this line to use the regular console.log
-console = require('@level451/newConsole')
 loadLocalSettings()
+
+console = require('@level451/newConsole')
 ted = require('./ted5000');
 ted.on('secondData', (d) => {
     process.stdout.write('.')

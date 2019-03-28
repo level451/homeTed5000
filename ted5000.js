@@ -4,8 +4,9 @@ const EventEmitter = require('events').EventEmitter;
 //util.inherits(EventEmitter,ted)
 const ted = new EventEmitter();
 const connector = require('@level451/connector');
+
 connector.on('connected',()=>{
-    connector.sendObjectData('ted',ted)
+    connector.sendObjectDefinitionDataToRemote('ted',ted)
 })
 module.exports = ted;
 var secondData = {}
@@ -46,7 +47,7 @@ ted.test  = (d)=>{
 
 ted.asyncTest = async function(...args){
     console.log(args)
-    await new Promise(resolve => setTimeout(resolve, 5000))
+    await new Promise(resolve => setTimeout(resolve, 2000))
     console.log(args)
     return args[2]+' = '+args[1]+args[0]
 }
