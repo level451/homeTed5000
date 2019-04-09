@@ -6,6 +6,8 @@ const ted = new EventEmitter();
 const connector = require('@level451/connector');
 
 connector.on('connected', () => {
+
+
     connector.sendObjectDefinitionDataToRemote('ted', ted)
 })
 module.exports = ted;
@@ -64,9 +66,8 @@ ted.asyncTest = async function (...args) {
 }
 
 ted.on('secondData', (d) => {
-
     connector.remoteEmit('ted', 'secondData', d)
 })
-ted.asyncTest('test in data').then(function (x) {
+ted.asyncTest('test in data',1,2).then(function (x) {
     console.log('fullfill', x)
 })

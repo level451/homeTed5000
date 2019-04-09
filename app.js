@@ -17,3 +17,5 @@ function loadLocalSettings() {
         }
     }
 }
+const connector = require('@level451/connector');
+connector.connect(localSettings.home.address,true,'Ted5000','ted5000');
