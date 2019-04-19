@@ -34,6 +34,7 @@ function go(MTU) {
                         cost: buff.readInt32LE(10, 4)
                     }
 
+
                 } catch (err) {
 
                 }
