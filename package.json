@@ -3,7 +3,5 @@
   "version": "1.0.0",
   "dependencies": {
     "request": "^2.88.0",
-    "@level451/newConsole": "latest",
-    "@level451/connector": "latest"
   }
 }
