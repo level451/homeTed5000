@@ -22,7 +22,7 @@ setInterval(function () {
 
 function go(MTU) {
     return new Promise(function (resolve, reject) {
-            request('http://ted5000/history/rawsecondhistory.raw?MTU=' + MTU + '&COUNT=1&INDEX=1', function (err, resp, body) {
+            request('http://10.6.1.99/history/rawsecondhistory.raw?MTU=' + MTU + '&COUNT=1&INDEX=1', function (err, resp, body) {
                 try {
                     let buff = new Buffer.from(body, 'base64');
                     if (!secondData.time) {
