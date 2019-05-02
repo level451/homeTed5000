@@ -14,6 +14,11 @@ function loadLocalSettings() {
     global.localSettings = {
         "home": {
             "address": "level451.com:2112"
+        },
+        ServiceInfo:{
+            id:"ted1",
+            systemType:"ted5000"
+
         }
     }
 }

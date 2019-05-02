@@ -5,7 +5,7 @@ const EventEmitter = require('events').EventEmitter;
 const ted = new EventEmitter();
 const connector = require('@level451/connector');
 
-connector.on('connected', () => {
+connector.on('connect', () => {
 
 
     connector.sendObjectDefinitionDataToRemote('ted', ted)
@@ -63,7 +63,7 @@ ted.asyncTest = async function (...args) {
     console.log(args)
     await new Promise(resolve => setTimeout(resolve, 2000))
     console.log(args)
-    return args[2] + ' = ' + args[1] + args[0]
+    return 'Args 0 ,1,2 :'+args[0] + args[1] + args[2]
 }
 
 ted.on('secondData', (d) => {
